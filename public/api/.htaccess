@@ -1,0 +1,10 @@
+# Only the endpoint should be reachable from the browser
+Options -Indexes
+
+<Files "bootstrap.php">
+  Require all denied
+</Files>
+
+<FilesMatch "\.(env|json|lock|md|txt|log)$">
+  Require all denied
+</FilesMatch>
